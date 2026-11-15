@@ -1,0 +1,31 @@
+Evidencia de lint inicial
+========================
+
+Comando ejecutado:
+npx eslint src/descuentos.js --format stylish
+
+Resultado inicial:
+
+C:\source\validacion software\tarea 1\src\descuentos.js
+  2:3   error  Unexpected var, use let or const instead  no-var
+  3:13  error  Expected '===' and instead saw '=='       eqeqeq
+  3:22  error  Expected { after 'if' condition           curly
+  4:25  error  Expected { after 'if' condition           curly
+  5:3   error  Unexpected var, use let or const instead  no-var
+
+✖ 5 problems (5 errors, 0 warnings)
+  4 errors and 0 warnings potentially fixable with the `--fix` option.
+
+Código de salida: 1 (ESLint encontró problemas).
+
+Justificación de reglas
+-----------------------
+- no-var: exige let o const, que tienen alcance de bloque y reducen errores
+  por redeclaración o acceso inesperado a variables.
+- eqeqeq: exige comparación estricta (===/!==) para evitar conversiones
+  implícitas de tipos en comparaciones.
+- no-unused-vars: detecta variables y parámetros declarados pero no usados,
+  evitando código muerto y posibles errores. En el archivo analizado no hubo
+  incidencias de esta regla porque sus identificadores sí se utilizan.
+- curly: exige llaves en las estructuras de control, haciendo explícito el
+  bloque condicional y evitando errores al agregar o modificar instrucciones.
