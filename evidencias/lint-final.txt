@@ -1,0 +1,11 @@
+Evidencia de lint final
+=======================
+
+Comando ejecutado:
+npm run lint
+
+Salida:
+> tarea-1@1.0.0 lint
+> eslint .
+
+Código de salida: 0 (lint finalizado correctamente, sin errores ni advertencias).
